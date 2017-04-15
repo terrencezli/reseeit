@@ -1,0 +1,14 @@
+<div class="container">
+    <md-toolbar>ReSeeIt</md-toolbar>
+    <md-grid-list cols="2" rowHeight="2:1" gutterSize="15px">
+        <md-grid-tile layout-wrap *ngFor="let receipt of receipts" (click)="onSelect($event, receipt)">
+            <md-card>
+                <md-card-header>
+                    <md-card-title>{{receipt.store}}</md-card-title>
+                    <md-card-subtitle layout-align="end center">{{receipt.date}}</md-card-subtitle>
+                    <md-card-subtitle>{{receipt.total}}</md-card-subtitle>
+                </md-card-header>
+            </md-card>
+        </md-grid-tile>
+    </md-grid-list>
+</div>
